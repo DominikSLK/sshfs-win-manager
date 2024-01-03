@@ -24,7 +24,7 @@ class ProcessHandlerWin {
 
       let cmdArgs = [
         `${conn.user}@${conn.host}:${conn.folder}`,
-        mountPoint,
+        `\\\\.\\${mountPoint}`,
         `-p${conn.port}`,
         `-ovolname=${conn.name.substr(0, 32)}`,
         '-odebug',
